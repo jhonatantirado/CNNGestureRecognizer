@@ -12,6 +12,29 @@ Theano 0.9.0
 
 Suggestion: Better to download Anaconda as it will take care of most of the other packages and easier to setup a virtual workspace to work with multiple versions of key packages like python, opencv etc.
 
+# How I made it work
+- Install Anaconda 2019.03, Python 3.7 version, for Windows 64 bits, from https://www.anaconda.com/distribution/
+- Open the Anaconda prompt
+- Create a conda environment with Python 3.6, give it a remarkable name
+- Activate the environment, by name
+- Inside the newly created environment
+- Install the required packages, with the following command: 
+`conda install --file requirements.txt`
+- Make sure the file "ori_4015imgs_weights.hdf5" exists and its size is about 150MB
+- If the file doesn't exist or it's too small, download it from the author's Google Drive link at https://drive.google.com/open?id=0B6cMRAuImU69SHNCcXpkT3RpYkE
+- Run the following command to start the program:
+`python trackgesture.py`
+- Choose option "2" to train the model
+- Follow the on-screen instructions
+- The training takes about 2 hours on a Core i7 w/8GB RAM
+- Close the program, and run it again
+- Choose option "1" to make hand gestures in front of the camera and have the program determine it and show the results
+
+Additional notes:
+- Downloading the pre-trained model "ori_4015imgs_weights.hdf5" from the author's Google Drive link helps only to be able to run the program, but the gesture prediction still won´t work
+- You have to train the model again for gesture prediction to work on your PC
+- In my case, it only works with Background Mask and Skin Mask filters activated because of poor ligthing conditions and lack of an empty white background
+
 # New changes
 I have uploaded few more changes to this repo -
 - Project is Python3 compatible now.
